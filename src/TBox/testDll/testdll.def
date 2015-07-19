@@ -1,0 +1,4 @@
+LIBRARY	"testDll"
+
+EXPORTS
+	fntestDll

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TBox", "TBox\TBox.vcproj", "{F9BB4233-D8CF-4402-BEFC-5D5AC69ABFEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestPlug", "TestPlug\TestPlug.vcproj", "{6DD41BD8-A383-4725-8746-C330E10A24B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testDll", "testDll\testDll.vcproj", "{821459EB-DC5D-4611-BF09-0468B81263CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9BB4233-D8CF-4402-BEFC-5D5AC69ABFEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9BB4233-D8CF-4402-BEFC-5D5AC69ABFEB}.Debug|Win32.Build.0 = Debug|Win32
+		{F9BB4233-D8CF-4402-BEFC-5D5AC69ABFEB}.Release|Win32.ActiveCfg = Release|Win32
+		{F9BB4233-D8CF-4402-BEFC-5D5AC69ABFEB}.Release|Win32.Build.0 = Release|Win32
+		{6DD41BD8-A383-4725-8746-C330E10A24B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6DD41BD8-A383-4725-8746-C330E10A24B0}.Debug|Win32.Build.0 = Debug|Win32
+		{6DD41BD8-A383-4725-8746-C330E10A24B0}.Release|Win32.ActiveCfg = Release|Win32
+		{6DD41BD8-A383-4725-8746-C330E10A24B0}.Release|Win32.Build.0 = Release|Win32
+		{821459EB-DC5D-4611-BF09-0468B81263CC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{821459EB-DC5D-4611-BF09-0468B81263CC}.Debug|Win32.Build.0 = Debug|Win32
+		{821459EB-DC5D-4611-BF09-0468B81263CC}.Release|Win32.ActiveCfg = Release|Win32
+		{821459EB-DC5D-4611-BF09-0468B81263CC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
