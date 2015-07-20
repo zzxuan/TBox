@@ -4,6 +4,7 @@
 #pragma once
 #include "TboxContextMain.h"
 #include "TBoxViewNotify.h"
+#include "Resource.h"
 
 
 // CTBoxDlg ¶Ô»°¿ò
@@ -34,6 +35,6 @@ protected:
 
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 
-private:
+public:
 	TBoxViewNotify m_viewNotify;
 };

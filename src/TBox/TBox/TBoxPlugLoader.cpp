@@ -1,9 +1,26 @@
 #include "StdAfx.h"
 #include "TBoxPlugLoader.h"
+#include <shlwapi.h>
 
 TBoxPlugLoader::TBoxPlugLoader(CString plugFolder)
 {
-	m_plugFolder = plugFolder;
+	//≈–∂œ «∑Ò¥Ê‘⁄
+	if(!PathFileExists(plugFolder))
+	{
+		TCHAR chpath[MAX_PATH] = {NULL};  
+		GetModuleFileName(NULL,chpath,MAX_PATH);
+		TCHAR * tt= _tcsrchr(chpath, _T('\\'));
+		if (tt != NULL)
+		{
+			tt[0] = '\0';
+		}
+		m_plugFolder.Format(_T("%s\\%s"),chpath,plugFolder.GetBuffer());
+	}
+	else
+	{
+		m_plugFolder = plugFolder;
+	}
+	
 }
 
 TBoxPlugLoader::~TBoxPlugLoader(void)
@@ -12,7 +29,20 @@ TBoxPlugLoader::~TBoxPlugLoader(void)
 
 BOOL TBoxPlugLoader::LoadConfig()
 {
+
 	CString path = m_plugFolder + _T("\\") + PLUGFILENAME;
+	//≈–∂œ «∑Ò¥Ê‘⁄
+	if(!PathFileExists(path))
+	{
+		TCHAR chpath[MAX_PATH] = {NULL};  
+		GetModuleFileName(NULL,chpath,MAX_PATH);
+		TCHAR * tt= _tcsrchr(chpath, _T('\\'));
+		if (tt != NULL)
+		{
+			tt[0] = '\0';
+		}
+		path.Format(_T("%s\\%s\\%s"),chpath,m_plugFolder,PLUGFILENAME);
+	}
 	
 
 	GetPrivateProfileString(_T("TBOX"),_T("PLUGNAME"),_T("ERROR")

@@ -4,12 +4,15 @@
 #include <vector>
 #include "TBoxPlugLoader.h"
 
+typedef UINT (WINAPI *pAddContextMenu)(UINT menuid,TCHAR *menuname,ContexMenuEvent OnClickEvent);
 
 class CTboxContextMain :
 	public CTboxConext
 {
 public:
 	static CTboxContextMain &GetInstance();
+
+	pAddContextMenu m_AddContextMenuEvent;
 private:
 	static CTboxContextMain s_contextMain;
 	std::vector<TBoxPlugLoader> m_tBoxPlugs;
@@ -20,7 +23,7 @@ public:
 	CTboxContextMain(void);
 	~CTboxContextMain(void);
 
-	virtual void AddContextMenu(TCHAR * menuname,void *OnClickEvent);
+	virtual UINT AddContextMenu(UINT menuid,TCHAR *menuname,ContexMenuEvent OnClickEvent);
 
 	virtual void ShowHintWindow(TCHAR * text,int timelen);
 

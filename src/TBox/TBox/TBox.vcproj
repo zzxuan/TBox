@@ -218,6 +218,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\TBoxDlgController.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\TBoxPlugLoader.cpp"
 				>
 			</File>
@@ -261,6 +265,10 @@
 			</File>
 			<File
 				RelativePath=".\TBoxDlg.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TBoxDlgController.h"
 				>
 			</File>
 			<File

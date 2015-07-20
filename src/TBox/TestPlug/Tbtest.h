@@ -12,4 +12,6 @@ public:
 
 	virtual void OnDestory();
 
+	static int WINAPI MenuClick(UINT menuid);
+
 };

@@ -7,6 +7,7 @@ CTboxContextMain CTboxContextMain::s_contextMain;
 CTboxContextMain::CTboxContextMain(void)
 {
 	InitializeCriticalSection(&m_tBoxPlugsSection);
+	m_AddContextMenuEvent = NULL;	
 }
 
 CTboxContextMain::~CTboxContextMain(void)
@@ -14,9 +15,14 @@ CTboxContextMain::~CTboxContextMain(void)
 	DeleteCriticalSection(&m_tBoxPlugsSection);
 }
 
-void CTboxContextMain::AddContextMenu(TCHAR * menuname,void *OnClickEvent)
+UINT CTboxContextMain::AddContextMenu(UINT menuid,TCHAR *menuname,ContexMenuEvent OnClickEvent)
 {
-	//throw std::logic_error("The method or operation is not implemented.");
+	if (m_AddContextMenuEvent != NULL)
+	{
+		UINT  n = m_AddContextMenuEvent(menuid,menuname,OnClickEvent);
+		return n;
+	}
+	return ERROR_NO_ASSOCIATION;
 }
 
 void CTboxContextMain::ShowHintWindow(TCHAR * text,int timelen)
